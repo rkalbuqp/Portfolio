@@ -1,0 +1,167 @@
+// Variáveis de cor
+$background-color: #7f9aab; // Cor ciano para o fundo do footer
+$text-color: #333; // Cor padrão do texto
+$hover-color: #a76a9e; // Rosa pastel para hover
+$header-background-color: rgba(255, 255, 255, 0.8); // Cor semi-transparente do menu
+$header-height: 5rem; // Altura estimada do header, ajuste conforme necessário
+
+// Mídia queries
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+// Estilos globais
+html {
+    background-image: url('../Assets/bgheader.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth; // Suaviza o scroll
+    scroll-snap-type: y mandatory; // Ativa o scroll snapping vertical
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+// Header
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: $header-background-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Adiciona uma leve sombra
+    position: sticky;
+    top: 0;
+    height: $header-height; // Altura do header
+    z-index: 1000; // Mantém o header sempre visível
+}
+
+// Navegação
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: $header-background-color;
+    border-radius: 5px;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: $hover-color;
+}
+
+// Título
+h1 {
+    font-size: 4rem;
+    margin-top: 1rem; // Ajuste para alinhamento apropriado
+    color: $text-color;
+    text-align: center; // Alinhado ao centro para melhor apresentação
+}
+
+// Imagem
+.forImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.forImage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Main
+main {
+    padding: 2rem;
+    margin-top: $header-height; // Garante que o main não fique atrás do header
+    flex: 1; // Permite que o main ocupe o restante do espaço disponível
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Alinha as seções ao lado esquerdo
+    justify-content: center; // Centraliza verticalmente
+    scroll-snap-type: y mandatory; // Adiciona scroll snapping ao main
+}
+
+// Seções
+section {
+    scroll-snap-align: start; // Alinha o início da seção ao rolar
+    padding: 2rem;
+    min-height: 100vh; // Garante que cada seção ocupe pelo menos uma tela inteira
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Alinha o conteúdo ao lado esquerdo
+    justify-content: center; // Centraliza o conteúdo verticalmente
+    width: 100%;
+}
+
+// Footer
+footer {
+    background-color: $background-color;
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    position: relative; // Ajuste para alinhamento
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+footer .footer-content p {
+    margin: 0;
+    text-align: center; // Alinha o texto ao centro
+}
+
+footer .copyright {
+    margin-top: 5px;
+    font-size: 0.6rem;
+}
+
+address {
+    margin-bottom: 0.2rem;
+    color: #fff;
+}

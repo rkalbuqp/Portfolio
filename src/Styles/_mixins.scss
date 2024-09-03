@@ -1,0 +1,28 @@
+@mixin body {
+    font-family: $background-color;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color; 
+    color: $background-color;
+}
+
+@mixin nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    font-family: $background-color;
+    background: inherit;
+    color: $background-color;
+    height: 8vh;
+}
+
+@mixin nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    font-family: $font;
+    background: inherit;
+    color: $background-color;
+    height: 8vh;
+    padding: 15px 15px 15px 15px;
+}
